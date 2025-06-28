@@ -1,0 +1,221 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore – SnapFits</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f7f7;
+      color: #111;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10%;
+      background-color: rgba(0, 0, 0, 0.85);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #e60023;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10%;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* Header with image background */
+    header {
+      background: url('fashion-explore-banner.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 10px;
+    }
+
+    .about-section {
+      max-width: 900px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-section h2 {
+      color: rgb(184, 38, 38);
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .fashion-links h3 {
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .fashion-links ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    .fashion-links li {
+      margin: 10px 0;
+    }
+
+    .fashion-links a {
+      color: #e60023;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .fashion-links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: grey;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="logo">SnapFits</a>
+    <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links">
+      <a href="image gallery.html">Home</a>
+      <a href="About us.html">About Us</a>
+      <a href="Eventful.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header>
+    <h1>See the Fashion World</h1>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <h2>We Help You Dress Better</h2>
+    <p>
+      At SnapFits, we understand that many people struggle with putting outfits together.
+      Dressing fine isn't always about owning the most expensive clothes  it's about
+      knowing how to <strong>merge and style your pieces confidently</strong>.
+      <br><br>
+      That’s why we show creative outfit ideas, fashion combinations, and style hacks
+      to help you level up your wardrobe game. Whether it’s mixing prints, layering
+      outfits, or styling basics, we’re here to inspire and guide your fashion journey.
+    </p>
+
+    <div class="fashion-links">
+      <h3>Explore the Fashion World:</h3>
+      <ul>
+        <li><a href="https://www.vogue.com/fashion" target="_blank">Vogue – Fashion Trends & Runway Looks</a></li>
+        <li><a href="https://www.elle.com/fashion/" target="_blank">Elle – Celebrity Style & Fashion Tips</a></li>
+        <li><a href="https://www.pinterest.com/search/pins/?q=fashion%20outfits" target="_blank">Pinterest – Outfit Inspiration</a></li>
+        <li><a href="https://www.instagram.com/explore/tags/fashion/" target="_blank">Instagram – #Fashion Hashtag</a></li>
+        <li><a href="https://www.glamour.com/fashion" target="_blank">Glamour – Everyday Style Advice</a></li>
+        <li><a href="https://lookbook.nu/" target="_blank">Lookbook – Real People, Real Outfits</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 SnapFits. All rights reserved.
+  </footer>
+
+</body>
+</html>
