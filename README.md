@@ -18,4 +18,3 @@
 
 ---
 
-## 📁 Project Structure
